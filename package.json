@@ -1,0 +1,48 @@
+{
+  "name": "worker-monitor",
+  "version": "0.0.0",
+  "description": "a node worker process monitor",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/manual.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jclem/worker-monitor"
+  },
+  "keywords": [
+    "cluster",
+    "worker",
+    "monitor"
+  ],
+  "author": "Jonathan Clem",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jclem/worker-monitor/issues"
+  },
+  "homepage": "https://github.com/jclem/worker-monitor",
+  "dependencies": {
+    "logfmt": "^1.1.2",
+    "prettysize": "0.0.3"
+  },
+  "jshintConfig": {
+    "curly": true,
+    "eqeqeq": true,
+    "globalstrict": true,
+    "undef": true,
+    "unused": true,
+    "globals": {
+      "clearInterval": false,
+      "clearTimeout": false,
+      "exports": false,
+      "module": false,
+      "process": false,
+      "require": false,
+      "setInterval": false,
+      "setTimeout": false
+    }
+  },
+  "devDependencies": {
+    "clusterflock": "^0.3.1"
+  }
+}
