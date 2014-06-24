@@ -10,7 +10,9 @@ Simply require and call `worker-monitor` for it to begin monitoring worker
 processes:
 
 ```javascript
-require('worker-monitor')();
+if (require('cluster').isWorker) {
+  require('worker-monitor')();
+}
 ```
 
 ### Options

@@ -1,11 +1,13 @@
 'use strict';
 
-require('..')({
-  logPeriod: 1000,
-  monitorPeriod: 5000,
-  disconnectTimeout: 2000,
-  memoryLimit: 1
-});
+if (require('cluster').isWorker) {
+  require('..')({
+    logPeriod: 1000,
+    monitorPeriod: 5000,
+    disconnectTimeout: 2000,
+    memoryLimit: 1
+  });
+}
 
 var clusterflock = require('clusterflock');
 
