@@ -1,7 +1,7 @@
 'use strict';
 
 require('..')({
-  logPeriod: 10000,
+  logPeriod: 1000,
   monitorPeriod: 5000,
   disconnectTimeout: 2000,
   memoryLimit: 1
