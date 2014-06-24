@@ -1,17 +1,10 @@
 'use strict';
 
-var cluster = require('cluster');
-var Monitor = require('./lib/monitor');
-var Killer  = require('./lib/killer');
+var cluster       = require('cluster');
+var WorkerMonitor = require('./lib/worker-monitor');
 
-exports.start = function(options) {
-  options = options || {};
-
+module.exports = function(options) {
   if (cluster.isWorker) {
-    new Monitor(cluster.worker, options);
-  } else {
-    cluster.on('fork', function(worker) {
-      new Killer(worker, options);
-    });
+    return new WorkerMonitor(cluster.worker, options);
   }
 };

@@ -1,6 +1,6 @@
 'use strict';
 
-require('..').start({
+require('..')({
   logPeriod: 10000,
   monitorPeriod: 5000,
   disconnectTimeout: 2000,
