@@ -37,20 +37,3 @@ require('worker-monitor')({
   logPeriod        : 5000
 });
 ```
-
-## Handling killed workers
-
-If you'd like to perform an action when a worker will be disconnected, tell your
-master worker to watch for a `workerExceededMemory` message:
-
-```javascript
-var cluster = require('cluster');
-
-if (cluster.isMaster) {
-  process.on('message', function(message) {
-    if (message === 'workerExceededMemory') {
-      cluster.fork(); // Fork a new worker
-    }
-  });
-}
-```
