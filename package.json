@@ -1,6 +1,6 @@
 {
   "name": "worker-monitor",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "description": "a node worker process monitor",
   "main": "index.js",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jclem/worker-monitor"
+    "url": "https://github.com/heroku/worker-monitor"
   },
   "keywords": [
     "cluster",
@@ -18,9 +18,9 @@
   "author": "Jonathan Clem",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jclem/worker-monitor/issues"
+    "url": "https://github.com/heroku/worker-monitor/issues"
   },
-  "homepage": "https://github.com/jclem/worker-monitor",
+  "homepage": "https://github.com/heroku/worker-monitor",
   "dependencies": {
     "logfmt": "^1.1.2",
     "prettysize": "0.0.3"
